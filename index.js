@@ -6,9 +6,9 @@ const {gameOptions,againOptions} = require('./options')
 const chats = {}
 
 
-const startGame = async (chatId,msg) => {
-  await bot.sendMessage(chatId, `Сейчас ${msg.from.first_name} я загадаю тебе цифру от 0 до 9, а ты должен её угадать!) `, gameOptions)
-  chats[chatId] = Math.floor(Math.random() * 10)
+const startGame = async (chatId) => {
+    await bot.sendMessage(chatId, `Сейчас я загадаю тебе цифру от 0 до 9, а ты попробуй её угадать!) `, gameOptions)
+    chats[chatId] = Math.floor(Math.random() * 10)
 }
 
 const start = () => {
